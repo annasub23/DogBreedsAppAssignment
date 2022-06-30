@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t1G-EJ-Dpw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BREEDS-->
+        <scene sceneID="wrT-f1-6ks">
+            <objects>
+                <tableViewController id="Dok-2N-wPl" customClass="DogsListViewController" customModule="ViewDogsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="934-QP-aCB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97479924799999995" green="0.83601974150000002" blue="0.83512741339999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="separatorColor" red="0.97479924799999995" green="0.83601974150000002" blue="0.83512741339999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.97479924799999995" green="0.83601974150000002" blue="0.83512741339999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogCell" id="rQl-uR-DYN">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rQl-uR-DYN" id="pdl-lL-hOl">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wU6-VR-mWC">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.97479924799999995" green="0.83601974150000002" blue="0.83512741339999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="3z7-W8-2em" kind="show" identifier="ShowDog" id="3oO-9X-3dc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Dok-2N-wPl" id="0hp-vi-OKH"/>
+                            <outlet property="delegate" destination="Dok-2N-wPl" id="Gp1-QS-Z6m"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="BREEDS" id="f6u-KU-h5C">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Wgk-qP-kFh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ZcD-1D-dqu">
+                                <rect key="frame" x="273.5" y="5" width="120.5" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Favorite Pics"/>
+                                <connections>
+                                    <action selector="showFavoritePicturesButtonPressed:" destination="Dok-2N-wPl" eventType="touchUpInside" id="c1y-DS-His"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <segue destination="INv-l1-pkj" kind="show" identifier="ShowFavDog" id="1kg-K9-6et"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="favPicturesButton" destination="Wgk-qP-kFh" id="6v4-L9-wNs"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbL-am-UBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-379.71014492753625" y="25.446428571428569"/>
+        </scene>
+        <!--Dog Breed View Controller-->
+        <scene sceneID="Ucf-gT-CnE">
+            <objects>
+                <collectionViewController id="3z7-W8-2em" customClass="DogBreedViewController" customModule="ViewDogsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vtc-SH-QQU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97479924799999995" green="0.83601974150000002" blue="0.83512741339999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rnk-0o-bE6">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImagesCell" id="oDe-jD-ipW" customClass="BreedImageCollectionViewCell" customModule="ViewDogsApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Byk-Ue-UpE">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="108"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7fS-66-bre">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvf-Yo-tL4">
+                                            <rect key="frame" x="91" y="8" width="37" height="45"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="suit.heart" catalog="system" title=""/>
+                                            <connections>
+                                                <action selector="likedSomeBreedButtonTouchUpInside:" destination="oDe-jD-ipW" eventType="touchUpInside" id="wCc-Sx-2oq"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Zvf-Yo-tL4" firstAttribute="top" secondItem="Byk-Ue-UpE" secondAttribute="top" constant="8" id="Jy9-Gp-2et"/>
+                                        <constraint firstItem="Zvf-Yo-tL4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Byk-Ue-UpE" secondAttribute="leading" constant="20" symbolic="YES" id="QNd-jx-nht"/>
+                                        <constraint firstAttribute="bottom" secondItem="Zvf-Yo-tL4" secondAttribute="bottom" constant="69" id="aMP-dy-fdV"/>
+                                        <constraint firstAttribute="trailing" secondItem="Zvf-Yo-tL4" secondAttribute="trailing" constant="0.5" id="hoE-ux-x9N"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="breedImage" destination="7fS-66-bre" id="Mgh-PP-Qt6"/>
+                                    <outlet property="likedBreedButton" destination="Zvf-Yo-tL4" id="gv7-Y2-BIi"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="3z7-W8-2em" id="sY3-q7-Wt1"/>
+                            <outlet property="delegate" destination="3z7-W8-2em" id="VZl-Hy-gZv"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="z5L-C7-zLq"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztj-yX-tYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.68115942028987" y="331.47321428571428"/>
+        </scene>
+        <!--Favorite Dogs View Controller-->
+        <scene sceneID="1ca-sh-8h1">
+            <objects>
+                <collectionViewController id="INv-l1-pkj" customClass="FavoriteDogsViewController" customModule="ViewDogsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gP5-Uz-8US">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97479924799999995" green="0.83601974150000002" blue="0.83512741339999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xkr-N2-xX5">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavorImageCell" id="azX-LV-HEf" customClass="FavoriteImagesCollectionViewCell" customModule="ViewDogsApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Kix-h3-MOZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nl0-cn-SbG">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="favoriteBreedsImageView" destination="Nl0-cn-SbG" id="bVQ-kd-9co"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="INv-l1-pkj" id="ebA-a8-F0e"/>
+                            <outlet property="delegate" destination="INv-l1-pkj" id="CV7-eu-iag"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="20R-Kf-gFo"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ev-O9-Dc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.68115942028987" y="-329.46428571428572"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hIC-Hn-e9I">
+            <objects>
+                <navigationController id="t1G-EJ-Dpw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ens-rr-m8Z">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Dok-2N-wPl" kind="relationship" relationship="rootViewController" id="8CH-M8-hx8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nT9-Am-KfW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1267" y="26"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
+    </resources>
+</document>

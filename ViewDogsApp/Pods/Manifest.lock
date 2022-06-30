@@ -1,0 +1,55 @@
+PODS:
+  - Agrume (5.8.0):
+    - SwiftyGif
+  - Alamofire (4.9.1)
+  - AlamofireNetworkActivityLogger (2.4.0):
+    - Alamofire (~> 4.8)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - EmptyKit (4.2.0)
+  - Kingfisher (4.10.1)
+  - ObjectMapper (3.5.3)
+  - PKHUD (5.3.0)
+  - SwiftLint (0.47.1)
+  - SwiftyGif (5.4.3)
+
+DEPENDENCIES:
+  - Agrume
+  - Alamofire (~> 4.5)
+  - AlamofireNetworkActivityLogger (~> 2.0)
+  - AlamofireObjectMapper (~> 5.0)
+  - EmptyKit
+  - Kingfisher (~> 4.0)
+  - ObjectMapper
+  - PKHUD (~> 5.0)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Agrume
+    - Alamofire
+    - AlamofireNetworkActivityLogger
+    - AlamofireObjectMapper
+    - EmptyKit
+    - Kingfisher
+    - ObjectMapper
+    - PKHUD
+    - SwiftLint
+    - SwiftyGif
+
+SPEC CHECKSUMS:
+  Agrume: 0b1a42b5bfbc3aa9f0801f2857d8df1138cf2951
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireNetworkActivityLogger: 6d3398c692d2c5d83b0c58793537860aca1e383d
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  EmptyKit: 95d75cad79476379124e929488116e409043c1d5
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
+  SwiftyGif: 6c3eafd0ce693cad58bb63d2b2fb9bacb8552780
+
+PODFILE CHECKSUM: 3359c995ba1b3bf27843d2b57b2a786c21374388
+
+COCOAPODS: 1.11.2
